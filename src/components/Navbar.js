@@ -8,14 +8,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navigation() {
   return (
-    <Navbar bg='dark' variant='dark' expand='lg'>
+    <Navbar className='shadow' bg='primary' variant='dark' expand='lg'>
       <Container fluid>
         <Navbar.Brand href='/'>
           <img
             alt=''
-            src='logo192.png'
+            src='logo-sm.png'
             width='30'
-            height='30'
             className='d-inline-block align-top'
           />{' '}
           Consortium

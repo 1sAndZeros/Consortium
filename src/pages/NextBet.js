@@ -6,7 +6,9 @@ function NextBet() {
   return (
     <>
       <Title title='Next Bet' />
-      <BetEntryForm />
+      <div className='text-center d-flex justify-content-center'>
+        <BetEntryForm />
+      </div>
     </>
   );
 }

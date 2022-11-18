@@ -1,16 +1,52 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  background-color: lightsteelblue;
+  font-family: 'Oswald', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
+  /* color: #62C1BF; */
 }
 
 .betchoice {
-  text-decoration: none;  
+  text-decoration: none;
+  max-width: 500px;
+}
+
+.form-signup, .form-signin {
+  max-width: 400px;
+  position: absolute;
+  z-index: 999;
+}
+
+section i {
+  color: var(--bs-light)
+}
+
+.logo-main {
+  color: aqua;
+}
+
+.form-footer img {
+  height: 1.5rem;
+  transform: translate(0,-20%);
+}
+
+.bg-img {
+  z-index: 99;
+  position: absolute;
+  ;
+}
+
+.credit {
+  position: relative;
+  bottom: 35px;
+  margin: 5px;
+  background-color: var(--bs-primary);
+  width: 25%;
+  border-radius: 10px;
+}
+
+.credit a {
+  color: var(--bs-link-danger);
 }
