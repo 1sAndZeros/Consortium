@@ -11,7 +11,7 @@ function Signup() {
   const [signingUp, setSigningUp] = useState(false);
   const navigate = useNavigate();
 
-  const SIGNUP_URL = 'http://localhost:5000/auth/signup';
+  const SIGNUP_URL = 'https://consortium-api.onrender.com/auth/signup';
 
   const schema = Joi.object({
     firstName: Joi.string()

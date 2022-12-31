@@ -13,7 +13,7 @@ function Navigation() {
  const navigate = useNavigate();
 
  useEffect(() => {
-   const API_URL = 'http://localhost:5000/';
+   const API_URL = 'https://consortium-api.onrender.com/';
    fetch(API_URL, {
      headers: {
        authorization: 'Bearer ' + localStorage.token,

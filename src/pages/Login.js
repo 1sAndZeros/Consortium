@@ -13,7 +13,7 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
-  const LOGIN_URL = 'http://localhost:5000/auth/login';
+  const LOGIN_URL = 'https://consortium-api.onrender.com/auth/login';
 
   const schema = Joi.object({
     password: Joi.string().pattern(

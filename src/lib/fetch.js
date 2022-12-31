@@ -1,7 +1,7 @@
 // USED FOR IMPORTING LIBRARIES SUCH AS AXIOS ETC.
 import axios from "axios";
 
-APIurl = 'http://localhost:5000/api/v1/'
+APIurl = 'https://consortium-api.onrender.com/api/v1/';
 
 export default function getCountries() {
   const countriesURL = `APIurl${countries}`;
