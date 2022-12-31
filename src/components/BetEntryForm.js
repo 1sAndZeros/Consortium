@@ -80,6 +80,7 @@ function BetEntryForm() {
           <Form.Select
             {...register('chosenLeagueId', { required: true })}
             onChange={updateFixture}
+            className='form-select'
           >
             <option></option>
             {leagueList.map((league, index) => {

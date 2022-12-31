@@ -9,22 +9,6 @@ function Footer() {
             className='btn btn-link btn-floating btn-lg text-light m-1'
             href='#!'
             role='button'
-            data-mdb-ripple-color='dark'
-          >
-            <i className='fab fa-facebook-f link-light'></i>
-          </a>
-          <a
-            className='btn btn-link btn-floating btn-lg text-light m-1'
-            href='#!'
-            role='button'
-            // data-mdb-ripple-color="dark"
-          >
-            <i className='fab fa-twitter link-light'></i>
-          </a>
-          <a
-            className='btn btn-link btn-floating btn-lg text-light m-1'
-            href='#!'
-            role='button'
             // data-mdb-ripple-color="dark"
           >
             <i className='fab fa-google link-light'></i>

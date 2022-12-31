@@ -1,5 +1,6 @@
-import React from 'react';
-// import Button from 'react-bootstrap/Button';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 // import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -7,8 +8,34 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navigation() {
+
+ const [user, setUser] = useState({});
+ const navigate = useNavigate();
+
+ useEffect(() => {
+   const API_URL = 'http://localhost:5000/';
+   fetch(API_URL, {
+     headers: {
+       authorization: 'Bearer ' + localStorage.token,
+     },
+   })
+     .then((res) => res.json())
+     .then((result) => {
+       if (result.user) {
+         setUser(result.user);
+       } else {
+         logout()
+       }
+     });
+ }, []);
+
+ function logout() {
+  localStorage.removeItem('token');
+  navigate('/login');
+ }
+
   return (
-    <Navbar className='shadow' bg='primary' variant='dark' expand='lg'>
+    <Navbar className='shadow sticky-top' bg='primary' variant='dark' expand='lg'>
       <Container fluid>
         <Navbar.Brand href='/'>
           <img
@@ -35,6 +62,12 @@ function Navigation() {
               <NavDropdown.Item href='/livebet'>Live Bet</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+        </Navbar.Collapse>
+        <Navbar.Collapse className='justify-content-end'>
+          <Navbar.Text className='me-3'>Hello {user.email}</Navbar.Text>
+          <Button variant='outline-danger' onClick={logout} typeof='submit'>
+            Log Out
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
